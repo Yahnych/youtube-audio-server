@@ -12,6 +12,9 @@
   "bin": {
     "yas": "./src/bin.js"
   },
+  "scripts": {
+    "start": "yas"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codealchemist/youtube-audio-server.git"
