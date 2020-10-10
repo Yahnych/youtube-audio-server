@@ -5,9 +5,9 @@ const nofavicon = require('express-no-favicons')
 const youtube = require('./youtube')
 const downloader = require('./downloader')
 const app = express()
-
 function listen (port, callback = () => {}) {
   app.use(nofavicon())
+  app.use(function(req, res, next) {   res.header("Access-Control-Allow-Origin", "*");   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");   next(); });
 
   app.get('/', (req, res) => {
     const file = path.resolve(__dirname, 'index.html')
